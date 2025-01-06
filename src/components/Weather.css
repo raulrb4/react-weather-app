@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Samsung-Bold';
+    src: url('../assets/fonts/Samsung-Bold.ttf');
+}
+@font-face {
+    font-family: 'Samsung-Medium';
+    src: url('../assets/fonts/Samsung-Medium.ttf');
+}
+@font-face {
+    font-family: 'Samsung-Regular';
+    src: url('../assets/fonts/Samsung-Regular.ttf');
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 70px;
+    background: linear-gradient(45deg, rgb(14, 14, 100), rgb(14, 14, 199));
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.search input {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: rgb(216, 216, 216);
+    font-family: 'Samsung-Medium';
+    font-size: 16px;
+}
+
+.search button {
+    border: none;
+    border-radius: 100%;
+    padding: 15px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-img  {
+    margin: 0 auto;
+    width: 300px ;
+}
+
+.info-temp {
+    font-family: 'Samsung-Bold';
+    color: white;
+    font-size: 50px;
+}
+
+.info-city {
+    color: white;
+    font-family: 'Samsung-Bold';
+    font-size: 30px;
+}
+
+.info-statistics {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.info-statistics-humidity {
+    display: flex;
+    gap: 10px;
+    font-family: 'Samsung-Regular';
+    text-align: start;
+    align-items: center;
+    color: white;
+}
+
+
+.info-statistics-wind {
+    display: flex;
+    gap: 10px;
+    color: white;
+    font-family: 'Samsung-Regular';
+    text-align: start;
+}
+
+
+.weather .info {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 20px;
+    opacity: 0;
+}
+
+/* Weather.css */
+.weather .info {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 20px;
+    opacity: 0;
+}
+
+.weather .info.show {
+    max-height: 600px; /* Ajuste a altura conforme necessário */
+    padding: 20px 20px;
+    opacity: 1;
+    transition: max-height 1s ease-out, padding 1s ease-out, opacity 1s ease-out;
+}
+
+.info img, .info h1, .info h2, .info-statistics {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.info.show img,
+.info.show h1,
+.info.show h2,
+.info.show .info-statistics {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
