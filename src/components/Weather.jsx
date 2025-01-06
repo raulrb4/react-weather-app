@@ -40,7 +40,7 @@ const Weather = () => {
         return
       }
 
-      const coordenadasReq = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${search}&appid=${apiKey}`)
+      const coordenadasReq = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${search}&appid=${apiKey}`)
 
       if (!coordenadasReq.data || !coordenadasReq.data[0]) {
         setWeatherIcon(errorIcon)
