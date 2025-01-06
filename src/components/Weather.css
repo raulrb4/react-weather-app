@@ -136,3 +136,86 @@
 }
 
 
+/* Ajuste geral para telas menores */
+@media (max-width: 768px) {
+    .weather {
+        padding: 20px 30px;
+        border-radius: 15px;
+    }
+
+    .search {
+        
+        gap: 10px;
+    }
+
+    .search input {
+        width: 100%; /* Largura total da tela */
+        font-size: 14px;
+    }
+
+    .search button {
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    .info-img {
+        width: 200px; /* Reduzir o tamanho da imagem */
+    }
+
+    .info-temp {
+        font-size: 40px; /* Reduzir tamanho da fonte */
+    }
+
+    .info-city {
+        font-size: 24px; /* Reduzir tamanho da fonte */
+    }
+
+    .info-statistics {
+        flex-direction: column; /* Alterar para layout em coluna */
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .info-statistics-humidity, .info-statistics-wind {
+        gap: 5px;
+        font-size: 14px; /* Reduzir tamanho da fonte */
+    }
+}
+
+/* Ajuste adicional para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+    .weather {
+        padding: 15px;
+    }
+
+    .search input {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .search button {
+        padding: 8px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .info-img {
+        width: 150px; /* Ajustar imagem ainda menor */
+    }
+
+    .info-temp {
+        font-size: 32px; /* Fonte menor */
+    }
+
+    .info-city {
+        font-size: 20px; /* Fonte menor */
+    }
+
+    .info-statistics {
+        gap: 10px;
+    }
+
+    .info-statistics-humidity, .info-statistics-wind {
+        font-size: 12px; /* Fonte menor */
+    }
+}
